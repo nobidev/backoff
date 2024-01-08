@@ -130,6 +130,11 @@ func (b *ExponentialBackOff) GetCurrentInterval() time.Duration {
 	return b.currentInterval
 }
 
+// SetStartTime will set a new value for startTime
+func (b *ExponentialBackOff) SetStartTime(v time.Time) {
+	b.startTime = v
+}
+
 // GetElapsedTime returns the elapsed time since an ExponentialBackOff instance
 // is created and is reset when Reset() is called.
 //
